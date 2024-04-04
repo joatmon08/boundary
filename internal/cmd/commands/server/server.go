@@ -499,6 +499,7 @@ func (c *Command) Run(args []string) int {
 	c.EnabledPlugins = append(c.EnabledPlugins, base.EnabledPluginAws)
 	if c.Config.Controller != nil {
 		c.EnabledPlugins = append(c.EnabledPlugins, base.EnabledPluginHostAzure)
+		c.EnabledPlugins = append(c.EnabledPlugins, base.EnabledPluginHostGoogle)
 		if err := c.StartController(c.Context); err != nil {
 			c.UI.Error(err.Error())
 			return base.CommandCliError

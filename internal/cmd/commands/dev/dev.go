@@ -816,7 +816,7 @@ func (c *Command) Run(args []string) int {
 	}
 
 	{
-		c.EnabledPlugins = append(c.EnabledPlugins, base.EnabledPluginAws, base.EnabledPluginHostAzure)
+		c.EnabledPlugins = append(c.EnabledPlugins, base.EnabledPluginAws, base.EnabledPluginHostAzure, base.EnabledPluginHostGoogle)
 		conf := &controller.Config{
 			RawConfig: c.Config,
 			Server:    c.Server,
